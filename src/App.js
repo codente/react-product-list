@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './index.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight, faChevronLeft, faCircle, faCheckCircle, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight, faChevronLeft, faCircle } from '@fortawesome/free-solid-svg-icons';
 
 const App = () => {
 
@@ -34,13 +34,6 @@ const App = () => {
   		setProducts(newProducts);
   		calculateTotalProducts();
   	};
-
-	const toggleComplete = (index) => {
-		const newProducts = [...products];
-
-
-		setProducts(newProducts);
-	}
 
 	const calculateTotalProducts = () => {
 		const totalCount = products.reduce((total, product) => {
